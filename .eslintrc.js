@@ -11,16 +11,20 @@ module.exports = {
     }
   },
   plugins: [
-    'ember'
+    'ember',
+    'prettier'
   ],
   extends: [
     'eslint:recommended',
     'plugin:ember/recommended'
   ],
   env: {
-    browser: true
+    browser: true,
+    node: true
   },
-  rules: {},
+  rules: {
+    'prettier/prettier': 'error'
+  },
   overrides: [
     // node files
     {
